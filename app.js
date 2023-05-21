@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 require("./userSchema/user");
 const USER = mongoose.model("USER");
 const cors = require("cors");
+const path = require("path")
 
 const app = express();
 
@@ -31,6 +32,18 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
+
+
+  app.use(express.static(path.join(__dirname, "./Frontend/build")));
+
+  app.get("*",(req,res)=>{
+    res.sendFile(
+      path.join(__dirname,"./Frontend/build/index.html"),
+      function (err){
+        res.status(500).send(err)
+      }
+    )
+  })
 
 app.listen(PORT, () => {
   console.log("server running at port", PORT);
