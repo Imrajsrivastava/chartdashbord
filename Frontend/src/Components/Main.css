@@ -1,0 +1,40 @@
+.filterDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filterDiv div{
+  margin: 10px;
+  padding: 10px;
+}
+
+.filterDiv select{
+  background-color: teal;
+  color: white;
+  font-weight: bold;
+  font-size: large;
+}
+
+.filterDiv button{
+
+  background-color: teal;
+  color: white;
+  font-weight: bold;
+  font-size: large;
+
+}
+
+table,th,td{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th{
+  background-color: rgb(38, 109, 109);
+  color: white;
+}
+table{
+  width: 95%;
+  margin: auto;
+}
